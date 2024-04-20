@@ -13,6 +13,7 @@ export const useCellEditStore = defineStore('cellEdit', () => {
   const currentColumnInfoOfFieldToEdit: Ref<CsvHeaderAsJson | null> = ref(null);
 
   const newFieldValue: Ref<string | number> = ref('');
+  const isNewFieldValueValid: Ref<boolean> = ref(true);
 
   const setCurrentCellToEdit = (row : CsvRowAsJson, field: string): void => {
     currentRowToEdit.value = row;
@@ -33,6 +34,7 @@ export const useCellEditStore = defineStore('cellEdit', () => {
     cellField,
     newFieldValue,
     currentColumnInfoOfFieldToEdit,
+    isNewFieldValueValid,
     setCurrentCellToEdit,
     updateCellValue,
   };

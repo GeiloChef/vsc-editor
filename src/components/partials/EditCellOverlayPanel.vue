@@ -26,6 +26,7 @@
           :label="$t('cancel')"
           @click="closeOverlay"/>
         <Button
+          :disabled="!isNewFieldValueValid"
           class="!max-h-8"
           size="small"
           :label="$t('save')"
@@ -48,7 +49,7 @@
   import { useCurrentTableStore } from '@/stores/currentTableStore';
 
   const cellEditStore = useCellEditStore();
-  const { cellField, currentColumnInfoOfFieldToEdit } = storeToRefs(cellEditStore);
+  const { cellField, currentColumnInfoOfFieldToEdit, isNewFieldValueValid } = storeToRefs(cellEditStore);
 
 
   const currentTableStore = useCurrentTableStore();

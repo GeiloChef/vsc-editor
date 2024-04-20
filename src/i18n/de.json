@@ -2,6 +2,7 @@
   "action": "Aktion",
   "add-new-row": "Neue Reihe einfügen",
   "auto-detection": "Automatisch erkennen",
+  "cancel": "Abbrechen",
   "cell-delimiter": "Begrenzungszeichen",
   "change-column-name": "Spaltenname bearbeiten",
   "change-column-type": "Spaltentyp ändern",
@@ -39,5 +40,10 @@
   "test": "test",
   "text": "Text",
   "text-type": "Text Typ",
-  "upload-file": "Datei auswählen"
+  "upload-file": "Datei auswählen",
+  "validation-error-message": {
+    "max": "Darf nicht mehr als {max} Zeichen haben!",
+    "min": "Muss mindestens {min} Zeichen haben!",
+    "required": "Feld darf nicht leer sein!"
+  }
 }

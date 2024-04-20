@@ -2,6 +2,7 @@
   "action": "Action",
   "add-new-row": "Add a new row",
   "auto-detection": "Detect automatically",
+  "cancel": "Cancel",
   "cell-delimiter": "Cell Delimiter",
   "change-column-name": "Edit Column Name",
   "change-column-type": "Change Column Type",
@@ -39,5 +40,10 @@
   "test": "test",
   "text": "Text",
   "text-type": "Text Type",
-  "upload-file": "Upload file"
+  "upload-file": "Upload file",
+  "validation-error-message": {
+    "max": "Must not have more then {max} characters!",
+    "min": "Must at least have {min} characters!",
+    "required": "Field can't be empty!"
+  }
 }
