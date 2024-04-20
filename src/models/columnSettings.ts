@@ -12,12 +12,16 @@ export interface TextColumnTypeSelection extends DictionaryItem<TextColumnType> 
 }
 export class TextColumnSettings {
   textType: TextColumnType;
+  hasMinLength: boolean;
   maxLength: number | null;
+  hasMaxLength: boolean;
   minLength: number | null;
 
   constructor() {
     this.textType = getTextColumnTypeSelectionByValue(TextColumnType.ShortText).value;
     this.maxLength = 45;
     this.minLength = 0;
+    this.hasMinLength = false;
+    this.hasMaxLength = false;
   }
 }
