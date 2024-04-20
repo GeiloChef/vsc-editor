@@ -115,7 +115,14 @@
       </template>
       <template #body="{ data, field }">
         <div
-          class="truncate"
+          v-if="!data[field]"
+          class="truncate w-full min-h-6 cursor-pointer"
+          @click="triggerEditCellOverlay($event, data, field)">
+
+        </div>
+        <div
+          v-else
+          class="truncate cursor-pointer"
           @click="triggerEditCellOverlay($event, data, field)">
           {{ data[field] }}
         </div>
