@@ -7,9 +7,11 @@
     :field-value="newFieldValue">
     <InputText
       v-if="isShortTextType"
+      :invalid="!isNewFieldValueValid"
       v-model="newFieldValue" />
     <Textarea
       v-if="isLongTextType"
+      :invalid="!isNewFieldValueValid"
       v-model="newFieldValue"
       rows="5"
       cols="30" />
