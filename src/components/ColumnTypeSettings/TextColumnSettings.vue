@@ -65,9 +65,3 @@
     return getSelectableTextColumnTypes();
   });
 </script>
-
-<style lang="css">
-.columnSettingsRow {
-  @apply flex flex-col gap-2
-}
-</style>
