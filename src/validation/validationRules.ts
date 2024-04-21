@@ -27,25 +27,25 @@ export class ValidationRulesOptions {
   }
 }
 
-export const min = (value: any, minCharacter: number): boolean | string => {
+export const minCharacters = (value: any, minCharacter: number): boolean | string => {
   if (minCharacter <= 0) {
     return true;
   }
 
   if (!value || !value.length || value.length < minCharacter) {
-    return i18n.global.t('validation-error-message.min', { min: minCharacter });
+    return i18n.global.t('validation-error-message.min-characters', { min: minCharacter });
   }
 
   return true;
 };
 
-export const max = (value: any, maxCharacter: number): boolean | string => {
+export const maxCharacters = (value: any, maxCharacter: number): boolean | string => {
   if (maxCharacter <= 0) {
     return true;
   }
 
   if (value && value.length && value.length > maxCharacter) {
-    return i18n.global.t('validation-error-message.max', { max: maxCharacter });
+    return i18n.global.t('validation-error-message.max-characters', { max: maxCharacter });
   }
 
   return true;

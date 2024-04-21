@@ -1,5 +1,5 @@
 // @/models/core.ts
-import { TextColumnSettings } from '@/models/columnSettings';
+import { NumberColumnSettings, TextColumnSettings } from '@/models/columnSettings';
 
 export interface LanguagesObject {
   german: Language,
@@ -12,6 +12,7 @@ export interface Language {
   momentLocale: string;
   i18nLocale: string;
   flagCode: string;
+  primeVueLocale: string
 }
 
 export enum ColumnType {
@@ -24,6 +25,7 @@ export interface CsvHeaderAsJson {
   label: string,
   columnType: ColumnType,
   columnTypeSettings_Text: TextColumnSettings
+  columnTypeSettings_Number: NumberColumnSettings
 }
 
 export interface CsvRowAsJson {

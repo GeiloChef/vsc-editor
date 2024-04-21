@@ -68,3 +68,7 @@ html {
 .p-dialog-content {
     @apply pt-8
 }
+
+.columnSettingsRow {
+    @apply flex flex-col gap-2
+}

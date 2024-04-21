@@ -12,7 +12,7 @@
 <script setup lang="ts">
   import { type PropType, ref, toRefs, watch } from 'vue';
 
-  import { max, min, required, ValidationRules, ValidationRulesOptions } from '@/validation/validationRules';
+  import { maxCharacters, minCharacters, required, ValidationRules, ValidationRulesOptions } from '@/validation/validationRules';
 
   const props = defineProps({
     fieldName: {
@@ -55,10 +55,10 @@
             validation = required(props.fieldValue);
             break;
           case ValidationRules.Min:
-            validation = min(props.fieldValue, fieldRulesOptions.value.minCharacters);
+            validation = minCharacters(props.fieldValue, fieldRulesOptions.value.minCharacters);
             break;
           case ValidationRules.Max:
-            validation = max(props.fieldValue, fieldRulesOptions.value.maxCharacters);
+            validation = maxCharacters(props.fieldValue, fieldRulesOptions.value.maxCharacters);
             break;
           default:
             break;
